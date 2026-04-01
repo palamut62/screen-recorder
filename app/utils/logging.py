@@ -4,7 +4,7 @@ import logging
 from pathlib import Path
 
 
-LOG_DIR = Path("logs")
+LOG_DIR = Path.home() / ".local" / "share" / "screen-recorder" / "logs"
 LOG_FILE = LOG_DIR / "screen_recorder.log"
 
 
