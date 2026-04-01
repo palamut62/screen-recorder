@@ -1,326 +1,251 @@
-/* ── Window shell ─────────────────────────────────────────── */
-.window-shell {
+/* ── Window ────────────────────────────────────────────────── */
+.window-bg {
   background:
-    radial-gradient(ellipse at 0% 0%, rgba(99, 179, 255, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 100% 100%, rgba(255, 100, 70, 0.10) 0%, transparent 50%),
-    linear-gradient(180deg, #0a1628 0%, #070e1a 100%);
+    radial-gradient(ellipse 60% 40% at 15% 10%, rgba(80,160,255,0.09) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 35% at 90% 90%, rgba(255,90,60,0.07) 0%, transparent 70%),
+    #0b1421;
 }
 
-/* ── Cards ─────────────────────────────────────────────────── */
-.card {
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+/* ── Panels ─────────────────────────────────────────────────── */
+.side-panel {
+  background: rgba(255,255,255,0.03);
+  border-right: 1px solid rgba(255,255,255,0.07);
 }
 
-.card-elevated {
-  border-radius: 16px;
-  background: rgba(15, 26, 46, 0.90);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+.panel-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.07);
 }
 
-/* ── Hero / Brand ──────────────────────────────────────────── */
-.hero-card {
-  padding: 16px;
-  border-radius: 16px;
-  background: linear-gradient(145deg, rgba(30, 50, 80, 0.95) 0%, rgba(14, 22, 38, 0.95) 100%);
-  border: 1px solid rgba(99, 179, 255, 0.15);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-}
-
-.hero-badge {
-  color: #5b9cf6;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  opacity: 0.85;
-}
-
-.brand-logo {
-  color: #ff7043;
-}
-
-.brand-title {
-  color: #eef2fb;
-  font-size: 1.25rem;
-  font-weight: 800;
-}
-
-.brand-subtitle {
-  color: rgba(200, 215, 240, 0.60);
-  font-size: 0.74rem;
-}
-
-/* ── Section headers ───────────────────────────────────────── */
-.section-title {
-  color: #e8eefa;
-  font-size: 0.88rem;
-  font-weight: 750;
-}
-
-.section-subtitle {
-  color: rgba(180, 200, 230, 0.60);
-  font-size: 0.72rem;
-}
-
-/* ── Buttons ───────────────────────────────────────────────── */
-.btn-primary {
-  min-height: 34px;
-  border-radius: 10px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  background: linear-gradient(180deg, #5b9cf6 0%, #3b7de8 100%);
-  color: #f0f6ff;
-  border: none;
-  box-shadow: 0 2px 8px rgba(60, 130, 240, 0.35);
-}
-
-.btn-primary:hover {
-  background: linear-gradient(180deg, #6eabff 0%, #4f8ef0 100%);
-}
-
-.btn-primary:disabled {
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.3);
-  box-shadow: none;
-}
-
-.btn-danger {
-  min-height: 34px;
-  border-radius: 10px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  background: linear-gradient(180deg, #f4654e 0%, #d94030 100%);
-  color: white;
-  border: none;
-  box-shadow: 0 2px 8px rgba(220, 70, 50, 0.40);
-}
-
-.btn-danger:hover {
-  background: linear-gradient(180deg, #ff7560 0%, #e85040 100%);
-}
-
-.btn-secondary {
-  min-height: 34px;
-  border-radius: 10px;
-  font-size: 0.82rem;
-  font-weight: 650;
-  background: rgba(255, 255, 255, 0.07);
-  color: #dce8f8;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.11);
-}
-
-.btn-secondary:disabled {
-  color: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.05);
-}
-
-.btn-icon {
-  min-height: 34px;
-  min-width: 34px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.07);
-  color: #dce8f8;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-}
-
-/* ── Status / Info pills ───────────────────────────────────── */
-.info-pill {
-  padding: 6px 12px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #c8d8f0;
-  font-size: 0.76rem;
-}
-
-.tag-pill {
-  padding: 3px 8px;
-  border-radius: 6px;
-  background: rgba(91, 156, 246, 0.15);
+/* ── Header bar extras ──────────────────────────────────────── */
+.session-chip {
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: rgba(91,156,246,0.15);
+  border: 1px solid rgba(91,156,246,0.25);
   color: #7ab4ff;
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.10em;
 }
 
-/* ── Preference rows ───────────────────────────────────────── */
-.pref-row {
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.pref-label {
-  color: rgba(210, 225, 248, 0.70);
-  font-size: 0.76rem;
-}
-
-/* ── Recording status ──────────────────────────────────────── */
-.rec-dot {
-  color: #ff5a49;
-  font-size: 0.85rem;
-}
-
-.rec-label {
-  color: #ff8c72;
-  font-size: 0.80rem;
-  font-weight: 700;
-}
-
-.rec-timer {
-  color: rgba(240, 245, 255, 0.65);
-  font-size: 0.76rem;
-  font-family: monospace;
-}
-
-.session-badge {
-  padding: 2px 8px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(180, 200, 230, 0.70);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-/* ── Library list ──────────────────────────────────────────── */
-.library-list {
-  background: transparent;
-}
-
-.library-list row {
-  border-radius: 10px;
-  margin: 2px 0;
-}
-
-.library-list row:selected {
-  background: rgba(91, 156, 246, 0.18);
-  border: 1px solid rgba(91, 156, 246, 0.30);
-}
-
-.lib-row {
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.lib-filename {
-  color: #e6eefb;
-  font-size: 0.82rem;
-  font-weight: 650;
-}
-
-.lib-meta {
-  color: rgba(170, 195, 230, 0.55);
+.rec-chip {
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: rgba(220,60,40,0.20);
+  border: 1px solid rgba(240,80,60,0.35);
+  color: #ff7060;
   font-size: 0.70rem;
-}
-
-/* ── Detail card ───────────────────────────────────────────── */
-.detail-card {
-  padding: 12px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.detail-title {
-  color: #e8f0fc;
-  font-size: 0.84rem;
-  font-weight: 700;
-}
-
-.detail-meta {
-  color: rgba(175, 200, 235, 0.60);
-  font-size: 0.74rem;
-}
-
-/* ── Media info ────────────────────────────────────────────── */
-.media-info-label {
-  color: rgba(190, 210, 240, 0.75);
-  font-size: 0.76rem;
-}
-
-/* ── Floating toolbar ──────────────────────────────────────── */
-.floating-toolbar {
-  padding: 10px 14px;
-  border-radius: 16px;
-  background: rgba(8, 14, 26, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.04);
-}
-
-.toolbar-dot {
-  color: #ff4d3d;
-  font-size: 1.0rem;
-}
-
-.toolbar-status {
-  color: #f0f4fc;
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.toolbar-timer {
-  color: rgba(220, 230, 248, 0.65);
-  font-size: 0.76rem;
-  font-family: monospace;
+  font-weight: 800;
 }
 
 /* ── ViewSwitcher ──────────────────────────────────────────── */
 viewswitcher {
+  background: rgba(255,255,255,0.05);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
   padding: 2px;
 }
 
 viewswitcher button {
-  min-height: 30px;
+  min-height: 28px;
   border-radius: 8px;
-  font-size: 0.80rem;
+  font-size: 0.79rem;
   font-weight: 650;
-  color: rgba(200, 220, 248, 0.70);
+  color: rgba(200,220,248,0.65);
 }
 
 viewswitcher button:checked {
-  background: rgba(255, 255, 255, 0.12);
-  color: #e8f0fc;
+  background: rgba(255,255,255,0.11);
+  color: #e6f0ff;
 }
 
-/* ── DropDown ──────────────────────────────────────────────── */
-dropdown {
-  border-radius: 8px;
+/* ── Section rows (pref-style) ──────────────────────────────── */
+.row-label {
+  color: rgba(200,220,248,0.65);
+  font-size: 0.78rem;
 }
 
-/* ── Separator ─────────────────────────────────────────────── */
-.divider {
-  background: rgba(255, 255, 255, 0.07);
-  min-height: 1px;
+.row-value {
+  color: #ddeaff;
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
-/* ── Spinner overlay ───────────────────────────────────────── */
-.export-overlay {
-  background: rgba(8, 16, 30, 0.80);
-  border-radius: 12px;
+.row-box {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
-/* ── Scrollbar ─────────────────────────────────────────────── */
-scrollbar {
+.row-box:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.row-box:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+/* region info */
+.region-info {
+  color: rgba(180,205,245,0.65);
+  font-size: 0.74rem;
+  font-style: italic;
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn-primary {
+  min-height: 32px;
+  border-radius: 9px;
+  font-size: 0.80rem;
+  font-weight: 700;
+  background: linear-gradient(160deg, #5b9cf6 0%, #3a7ae0 100%);
+  color: #eef4ff;
+  border: none;
+  box-shadow: 0 2px 10px rgba(60,122,224,0.30);
+}
+
+.btn-primary:hover { background: linear-gradient(160deg, #6eabff 0%, #4d8ef0 100%); }
+.btn-primary:active { box-shadow: none; }
+.btn-primary:disabled {
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.25);
+  box-shadow: none;
+}
+
+.btn-danger {
+  min-height: 32px;
+  border-radius: 9px;
+  font-size: 0.80rem;
+  font-weight: 700;
+  background: linear-gradient(160deg, #f05040 0%, #d03020 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 10px rgba(210,50,30,0.35);
+}
+
+.btn-danger:hover { background: linear-gradient(160deg, #ff6654 0%, #e04030 100%); }
+.btn-danger:disabled {
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.25);
+  box-shadow: none;
+}
+
+.btn-secondary {
+  min-height: 32px;
+  border-radius: 9px;
+  font-size: 0.80rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.07);
+  color: #d8e8f8;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.btn-secondary:hover { background: rgba(255,255,255,0.12); }
+.btn-secondary:disabled { color: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.05); }
+
+/* ── Status bar ─────────────────────────────────────────────── */
+.status-bar {
+  background: rgba(0,0,0,0.18);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 5px 14px;
+}
+
+.status-text {
+  color: rgba(180,205,240,0.65);
+  font-size: 0.72rem;
+}
+
+.status-text.recording {
+  color: #ff8060;
+  font-weight: 700;
+}
+
+.timer-text {
+  color: rgba(210,228,255,0.55);
+  font-size: 0.72rem;
+  font-family: monospace;
+}
+
+/* ── Library ─────────────────────────────────────────────────── */
+.lib-list {
   background: transparent;
 }
 
-scrollbar slider {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 4px;
-  min-width: 4px;
-  min-height: 4px;
+.lib-list row {
+  border-radius: 8px;
+  margin: 1px 6px;
 }
 
-scrollbar slider:hover {
-  background: rgba(255, 255, 255, 0.25);
+.lib-list row:selected .lib-row-box {
+  background: rgba(91,156,246,0.15);
+  border-color: rgba(91,156,246,0.28);
 }
+
+.lib-row-box {
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 7px 10px;
+  margin: 1px 0;
+}
+
+.lib-name {
+  color: #dce8fc;
+  font-size: 0.80rem;
+  font-weight: 600;
+}
+
+.lib-ext {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(180,205,240,0.70);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+/* ── Detail strip ───────────────────────────────────────────── */
+.detail-strip {
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 10px 14px;
+}
+
+.detail-name {
+  color: #e0eaff;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.detail-meta {
+  color: rgba(165,195,235,0.60);
+  font-size: 0.72rem;
+}
+
+/* ── Floating toolbar ────────────────────────────────────────── */
+.floating-toolbar {
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(6,12,22,0.97);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.60);
+}
+
+.toolbar-dot { color: #ff4433; font-size: 0.9rem; }
+.toolbar-status { color: #eef3fc; font-size: 0.80rem; font-weight: 700; }
+.toolbar-timer { color: rgba(210,228,255,0.60); font-size: 0.74rem; font-family: monospace; }
+
+/* ── Misc ────────────────────────────────────────────────────── */
+scrollbar { background: transparent; }
+scrollbar slider {
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px;
+  min-width: 4px;
+}
+scrollbar slider:hover { background: rgba(255,255,255,0.22); }
+
+dropdown { border-radius: 8px; }
+
+.sep { background: rgba(255,255,255,0.07); min-height: 1px; }
