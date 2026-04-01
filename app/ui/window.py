@@ -589,7 +589,7 @@ class RecorderWindow(Adw.ApplicationWindow):
         self.media_path: Path | None = None
 
         self.set_title("ScreenRecorder")
-        self.set_default_size(460, 620)
+        self.set_default_size(500, 700)
         self.set_resizable(False)
         self._load_css()
         self.set_content(self._build_ui())
@@ -665,21 +665,21 @@ class RecorderWindow(Adw.ApplicationWindow):
 
         inner = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         inner.set_halign(Gtk.Align.CENTER)
-        inner.set_margin_top(24)
-        inner.set_margin_bottom(28)
-        inner.set_margin_start(28)
-        inner.set_margin_end(28)
+        inner.set_margin_top(12)
+        inner.set_margin_bottom(18)
+        inner.set_margin_start(24)
+        inner.set_margin_end(24)
         inner.set_size_request(400, -1)
 
         # Robot icon
         robot_img = self._build_robot_image()
-        robot_img.set_margin_bottom(14)
+        robot_img.set_margin_bottom(8)
         inner.append(robot_img)
 
         # App title
         title = Gtk.Label(label="Screen Recorder")
         title.add_css_class("app-title")
-        title.set_margin_bottom(24)
+        title.set_margin_bottom(14)
         inner.append(title)
 
         # Main card
@@ -708,7 +708,7 @@ class RecorderWindow(Adw.ApplicationWindow):
         if _ROBOT_PATH.exists():
             try:
                 pb = GdkPixbuf.Pixbuf.new_from_file_at_scale(
-                    str(_ROBOT_PATH), 220, 210, True
+                    str(_ROBOT_PATH), 320, 300, True
                 )
                 return Gtk.Image.new_from_pixbuf(pb)
             except Exception:
