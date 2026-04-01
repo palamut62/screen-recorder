@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2f50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1a30;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f2440;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="recGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e63020;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5b9cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b7de8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glowRed">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="roundedApp">
+      <rect x="0" y="0" width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
+  </defs>
+
+  <!-- App background rounded rect -->
+  <rect x="0" y="0" width="512" height="512" rx="112" ry="112" fill="url(#bgGrad)"/>
+
+  <!-- Subtle top highlight -->
+  <rect x="0" y="0" width="512" height="180" rx="112" ry="112" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- Monitor body -->
+  <rect x="64" y="96" width="384" height="248" rx="20" ry="20"
+        fill="url(#screenGrad)" filter="url(#shadow)"
+        stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+
+  <!-- Monitor screen inner -->
+  <rect x="82" y="112" width="348" height="216" rx="10" ry="10"
+        fill="#060e1c"/>
+
+  <!-- Screen content: subtle grid lines -->
+  <line x1="82" y1="168" x2="430" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="82" y1="224" x2="430" y2="224" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="82" y1="280" x2="430" y2="280" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="192" y1="112" x2="192" y2="328" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="302" y1="112" x2="302" y2="328" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Monitor stand neck -->
+  <rect x="228" y="344" width="56" height="44" rx="6" ry="6" fill="#0f2038"/>
+
+  <!-- Monitor stand base -->
+  <rect x="166" y="384" width="180" height="22" rx="11" ry="11"
+        fill="#0f2038" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- REC badge (top-right of screen) -->
+  <rect x="344" y="126" width="74" height="28" rx="8" ry="8" fill="url(#recGrad)" opacity="0.95"/>
+  <text x="381" y="145" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="13" font-weight="800" fill="white" text-anchor="middle"
+        letter-spacing="1.5">REC</text>
+
+  <!-- Red recording dot (with glow) -->
+  <circle cx="356" cy="140" r="5" fill="#ff3322" filter="url(#glowRed)"/>
+
+  <!-- Play button circle in center of screen -->
+  <circle cx="256" cy="220" r="52" fill="url(#btnGrad)" opacity="0.15"/>
+  <circle cx="256" cy="220" r="44" fill="rgba(91,156,246,0.10)"
+          stroke="rgba(91,156,246,0.30)" stroke-width="1.5"/>
+
+  <!-- Play triangle -->
+  <polygon points="244,200 244,240 282,220" fill="#5b9cf6" opacity="0.90"/>
+
+  <!-- Recording time bar at bottom of screen -->
+  <rect x="98" y="306" width="316" height="8" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <rect x="98" y="306" width="148" height="8" rx="4" fill="url(#recGrad)" opacity="0.70"/>
+
+  <!-- Corner brackets (region selection indicator) -->
+  <path d="M 98 130 L 98 148 M 98 130 L 116 130" stroke="#5b9cf6" stroke-width="3"
+        stroke-linecap="round" fill="none" opacity="0.60"/>
+  <path d="M 414 130 L 414 148 M 414 130 L 396 130" stroke="#5b9cf6" stroke-width="3"
+        stroke-linecap="round" fill="none" opacity="0.60"/>
+  <path d="M 98 310 L 98 292 M 98 310 L 116 310" stroke="#5b9cf6" stroke-width="3"
+        stroke-linecap="round" fill="none" opacity="0.60"/>
+  <path d="M 414 310 L 414 292 M 414 310 L 396 310" stroke="#5b9cf6" stroke-width="3"
+        stroke-linecap="round" fill="none" opacity="0.60"/>
+</svg>

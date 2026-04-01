@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Screen Recorder
+GenericName=Screen Recorder
+Comment=Capture, convert and export screen recordings
+Exec=bash -c "cd /home/aras/Masaüstü/UYGULAMALARIM/screen_capture && python3 -m app.main"
+Icon=/home/aras/Masaüstü/UYGULAMALARIM/screen_capture/assets/icons/screen-recorder-256.png
+Terminal=false
+Categories=AudioVideo;Video;Recorder;
+Keywords=screen;record;capture;video;ffmpeg;
+StartupNotify=true
+StartupWMClass=screen-recorder
