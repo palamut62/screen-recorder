@@ -20,7 +20,7 @@ from app.utils.env import detect_session_type
 
 MEDIA_EXTENSIONS = {".mp4", ".mkv", ".webm", ".gif", ".mov", ".avi"}
 _CSS_PATH   = Path(__file__).parent / "style.css"
-_ROBOT_PATH = Path(__file__).parent.parent.parent / "assets" / "icons" / "robot.png"
+_ROBOT_PATH = Path(__file__).parent.parent.parent / "assets" / "icons" / "claude.png"
 
 
 # ─────────────────────────────────────────────────────────────
