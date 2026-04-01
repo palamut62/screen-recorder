@@ -1,194 +1,212 @@
-/* ── Window ────────────────────────────────────────────────── */
-.window-bg {
-  background:
-    radial-gradient(ellipse 60% 40% at 15% 10%, rgba(80,160,255,0.09) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 35% at 90% 90%, rgba(255,90,60,0.07) 0%, transparent 70%),
-    #0b1421;
+/* ── Window background ──────────────────────────────────────── */
+.app-bg {
+  background: #1c2028;
 }
 
-/* ── Panels ─────────────────────────────────────────────────── */
-.side-panel {
-  background: rgba(255,255,255,0.03);
-  border-right: 1px solid rgba(255,255,255,0.07);
+/* ── HeaderBar (flat, blends into bg) ───────────────────────── */
+headerbar {
+  background: #1c2028;
+  box-shadow: none;
+  border-bottom: none;
 }
 
-.panel-card {
-  background: rgba(255,255,255,0.03);
-  border-radius: 12px;
+headerbar .title {
+  color: #e8edf5;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+/* ── Center content column ──────────────────────────────────── */
+.center-col {
+  background: #1c2028;
+}
+
+/* ── App title label ────────────────────────────────────────── */
+.app-title {
+  color: #f0f4fc;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+/* ── Main card (dark panel) ─────────────────────────────────── */
+.main-card {
+  background: #252b36;
+  border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.07);
 }
 
-/* ── Header bar extras ──────────────────────────────────────── */
-.session-chip {
-  padding: 2px 8px;
-  border-radius: 20px;
-  background: rgba(91,156,246,0.15);
-  border: 1px solid rgba(91,156,246,0.25);
-  color: #7ab4ff;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.10em;
+/* ── Select Region button (outline ghost style) ─────────────── */
+.btn-region {
+  min-height: 44px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  color: rgba(200,215,240,0.55);
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
-.rec-chip {
-  padding: 2px 10px;
-  border-radius: 20px;
-  background: rgba(220,60,40,0.20);
-  border: 1px solid rgba(240,80,60,0.35);
-  color: #ff7060;
-  font-size: 0.70rem;
-  font-weight: 800;
-}
-
-/* ── ViewSwitcher ──────────────────────────────────────────── */
-viewswitcher {
+.btn-region:hover {
   background: rgba(255,255,255,0.05);
-  border-radius: 10px;
-  padding: 2px;
+  color: rgba(200,215,240,0.80);
+  border-color: rgba(255,255,255,0.28);
 }
 
-viewswitcher button {
-  min-height: 28px;
-  border-radius: 8px;
-  font-size: 0.79rem;
-  font-weight: 650;
-  color: rgba(200,220,248,0.65);
+.btn-region:disabled {
+  color: rgba(200,215,240,0.25);
+  border-color: rgba(255,255,255,0.08);
 }
 
-viewswitcher button:checked {
-  background: rgba(255,255,255,0.11);
-  color: #e6f0ff;
-}
-
-/* ── Section rows (pref-style) ──────────────────────────────── */
-.row-label {
-  color: rgba(200,220,248,0.65);
-  font-size: 0.78rem;
-}
-
-.row-value {
-  color: #ddeaff;
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.row-box {
-  padding: 8px 12px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-.row-box:last-child {
-  border-radius: 0 0 10px 10px;
-}
-
-.row-box:first-child {
-  border-radius: 10px 10px 0 0;
-}
-
-/* region info */
-.region-info {
-  color: rgba(180,205,245,0.65);
-  font-size: 0.74rem;
-  font-style: italic;
-}
-
-/* ── Buttons ────────────────────────────────────────────────── */
-.btn-primary {
-  min-height: 32px;
-  border-radius: 9px;
-  font-size: 0.80rem;
-  font-weight: 700;
-  background: linear-gradient(160deg, #5b9cf6 0%, #3a7ae0 100%);
-  color: #eef4ff;
-  border: none;
-  box-shadow: 0 2px 10px rgba(60,122,224,0.30);
-}
-
-.btn-primary:hover { background: linear-gradient(160deg, #6eabff 0%, #4d8ef0 100%); }
-.btn-primary:active { box-shadow: none; }
-.btn-primary:disabled {
-  background: rgba(255,255,255,0.07);
-  color: rgba(255,255,255,0.25);
-  box-shadow: none;
-}
-
-.btn-danger {
-  min-height: 32px;
-  border-radius: 9px;
-  font-size: 0.80rem;
-  font-weight: 700;
-  background: linear-gradient(160deg, #f05040 0%, #d03020 100%);
-  color: #fff;
-  border: none;
-  box-shadow: 0 2px 10px rgba(210,50,30,0.35);
-}
-
-.btn-danger:hover { background: linear-gradient(160deg, #ff6654 0%, #e04030 100%); }
-.btn-danger:disabled {
-  background: rgba(255,255,255,0.07);
-  color: rgba(255,255,255,0.25);
-  box-shadow: none;
-}
-
-.btn-secondary {
-  min-height: 32px;
-  border-radius: 9px;
-  font-size: 0.80rem;
-  font-weight: 600;
-  background: rgba(255,255,255,0.07);
-  color: #d8e8f8;
-  border: 1px solid rgba(255,255,255,0.10);
-}
-
-.btn-secondary:hover { background: rgba(255,255,255,0.12); }
-.btn-secondary:disabled { color: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.05); }
-
-/* ── Status bar ─────────────────────────────────────────────── */
-.status-bar {
-  background: rgba(0,0,0,0.18);
-  border-top: 1px solid rgba(255,255,255,0.06);
+/* ── Resolution pill ────────────────────────────────────────── */
+.res-pill {
   padding: 5px 14px;
-}
-
-.status-text {
-  color: rgba(180,205,240,0.65);
-  font-size: 0.72rem;
-}
-
-.status-text.recording {
-  color: #ff8060;
-  font-weight: 700;
-}
-
-.timer-text {
-  color: rgba(210,228,255,0.55);
-  font-size: 0.72rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(190,210,240,0.65);
+  font-size: 0.80rem;
+  font-weight: 600;
   font-family: monospace;
 }
 
-/* ── Library ─────────────────────────────────────────────────── */
-.lib-list {
-  background: transparent;
+/* ── Record / Stop button (large, full width) ───────────────── */
+.btn-record {
+  min-height: 50px;
+  border-radius: 12px;
+  font-size: 0.96rem;
+  font-weight: 800;
+  background: linear-gradient(160deg, #3ecf6e 0%, #29b558 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(46,185,88,0.35);
+  letter-spacing: 0.02em;
 }
+
+.btn-record:hover {
+  background: linear-gradient(160deg, #4edd7e 0%, #33c862 100%);
+}
+
+.btn-record:disabled {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.25);
+  box-shadow: none;
+}
+
+.btn-stop {
+  min-height: 50px;
+  border-radius: 12px;
+  font-size: 0.96rem;
+  font-weight: 800;
+  background: linear-gradient(160deg, #f05545 0%, #d63020 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(220,55,30,0.40);
+  letter-spacing: 0.02em;
+}
+
+.btn-stop:hover {
+  background: linear-gradient(160deg, #ff6655 0%, #e84030 100%);
+}
+
+/* ── Status line (● Recording...) ──────────────────────────── */
+.status-dot-red {
+  color: #f04030;
+  font-size: 0.80rem;
+}
+
+.status-dot-green {
+  color: #3ecf6e;
+  font-size: 0.80rem;
+}
+
+.status-label {
+  color: rgba(210,225,248,0.75);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.status-label.recording {
+  color: #f07060;
+}
+
+.timer-label {
+  color: rgba(180,205,240,0.55);
+  font-size: 0.80rem;
+  font-family: monospace;
+}
+
+/* ── Show in Finder pill button ─────────────────────────────── */
+.btn-pill {
+  min-height: 36px;
+  border-radius: 20px;
+  padding: 0 18px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(210,228,255,0.80);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.btn-pill:hover {
+  background: rgba(255,255,255,0.13);
+}
+
+.btn-pill:disabled {
+  color: rgba(210,228,255,0.25);
+  border-color: rgba(255,255,255,0.06);
+}
+
+/* ── Recordings / Media Tools popover ───────────────────────── */
+.btn-icon-pill {
+  min-height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(200,220,248,0.70);
+}
+
+.btn-icon-pill:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* ── Popover panels ─────────────────────────────────────────── */
+popover > contents {
+  background: #252b36;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 0;
+}
+
+.pop-title {
+  color: #e0eafc;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.pop-subtitle {
+  color: rgba(170,195,235,0.55);
+  font-size: 0.72rem;
+}
+
+/* Library rows in popover */
+.lib-list { background: transparent; }
 
 .lib-list row {
   border-radius: 8px;
-  margin: 1px 6px;
+  margin: 1px 4px;
 }
 
-.lib-list row:selected .lib-row-box {
+.lib-list row:selected .lib-row {
   background: rgba(91,156,246,0.15);
   border-color: rgba(91,156,246,0.28);
 }
 
-.lib-row-box {
+.lib-row {
   border-radius: 8px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
   padding: 7px 10px;
-  margin: 1px 0;
 }
 
 .lib-name {
@@ -201,43 +219,87 @@ viewswitcher button:checked {
   padding: 1px 6px;
   border-radius: 4px;
   background: rgba(255,255,255,0.08);
-  color: rgba(180,205,240,0.70);
+  color: rgba(170,200,235,0.65);
   font-size: 0.65rem;
   font-weight: 700;
 }
 
-/* ── Detail strip ───────────────────────────────────────────── */
-.detail-strip {
-  background: rgba(255,255,255,0.03);
-  border-top: 1px solid rgba(255,255,255,0.07);
-  padding: 10px 14px;
+.lib-meta {
+  color: rgba(150,180,225,0.50);
+  font-size: 0.70rem;
 }
 
-.detail-name {
-  color: #e0eaff;
-  font-size: 0.82rem;
+/* Row setting boxes inside popover */
+.row-box {
+  padding: 8px 12px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.row-label {
+  color: rgba(190,215,248,0.60);
+  font-size: 0.78rem;
+}
+
+/* Buttons inside popover */
+.btn-primary {
+  min-height: 32px;
+  border-radius: 8px;
+  font-size: 0.80rem;
   font-weight: 700;
+  background: linear-gradient(160deg, #5b9cf6 0%, #3a7ae0 100%);
+  color: #eef4ff;
+  border: none;
+}
+.btn-primary:disabled {
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.22);
 }
 
-.detail-meta {
-  color: rgba(165,195,235,0.60);
-  font-size: 0.72rem;
+.btn-secondary {
+  min-height: 32px;
+  border-radius: 8px;
+  font-size: 0.80rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.07);
+  color: #d8e8f8;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.btn-secondary:disabled { color: rgba(255,255,255,0.22); }
+
+.btn-danger {
+  min-height: 32px;
+  border-radius: 8px;
+  font-size: 0.80rem;
+  font-weight: 700;
+  background: linear-gradient(160deg, #f05040 0%, #d03020 100%);
+  color: white;
+  border: none;
+}
+
+.sep { background: rgba(255,255,255,0.07); min-height: 1px; }
+
+/* Export status */
+.export-status {
+  color: rgba(180,205,240,0.65);
+  font-size: 0.76rem;
 }
 
 /* ── Floating toolbar ────────────────────────────────────────── */
 .floating-toolbar {
   padding: 10px 14px;
   border-radius: 14px;
-  background: rgba(6,12,22,0.97);
+  background: rgba(6,10,20,0.97);
   border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.60);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.65);
 }
 
-.toolbar-dot { color: #ff4433; font-size: 0.9rem; }
-.toolbar-status { color: #eef3fc; font-size: 0.80rem; font-weight: 700; }
-.toolbar-timer { color: rgba(210,228,255,0.60); font-size: 0.74rem; font-family: monospace; }
+.toolbar-dot   { color: #f04030; font-size: 0.90rem; }
+.toolbar-status{ color: #eef3fc; font-size: 0.80rem; font-weight: 700; }
+.toolbar-timer { color: rgba(200,225,255,0.55); font-size: 0.74rem; font-family: monospace; }
 
-/* ── Misc ────────────────────────────────────────────────────── */
+/* ── Scrollbar ───────────────────────────────────────────────── */
 scrollbar { background: transparent; }
 scrollbar slider {
   background: rgba(255,255,255,0.12);
@@ -247,5 +309,3 @@ scrollbar slider {
 scrollbar slider:hover { background: rgba(255,255,255,0.22); }
 
 dropdown { border-radius: 8px; }
-
-.sep { background: rgba(255,255,255,0.07); min-height: 1px; }
