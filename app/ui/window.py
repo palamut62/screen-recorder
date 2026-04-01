@@ -708,7 +708,7 @@ class RecorderWindow(Adw.ApplicationWindow):
         if _ROBOT_PATH.exists():
             try:
                 pb = GdkPixbuf.Pixbuf.new_from_file_at_scale(
-                    str(_ROBOT_PATH), 112, 140, True
+                    str(_ROBOT_PATH), 220, 210, True
                 )
                 return Gtk.Image.new_from_pixbuf(pb)
             except Exception:
