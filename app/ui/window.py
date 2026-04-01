@@ -653,11 +653,15 @@ class RecorderWindow(Adw.ApplicationWindow):
         # Scrollable center column
         scroll = Gtk.ScrolledWindow()
         scroll.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        scroll.add_css_class("app-bg")
+        scroll.set_vexpand(True)
+        scroll.set_hexpand(True)
 
         col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         col.add_css_class("app-bg")
         col.set_halign(Gtk.Align.FILL)
-        col.set_valign(Gtk.Align.START)
+        col.set_valign(Gtk.Align.FILL)
+        col.set_vexpand(True)
 
         inner = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         inner.set_halign(Gtk.Align.CENTER)
